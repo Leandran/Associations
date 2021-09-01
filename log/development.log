@@ -1,0 +1,113 @@
+Started GET "/" for ::1 at 2021-08-31 23:35:24 +0200
+
+PG::ConnectionBad - server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.:
+
+Started POST "/__better_errors/a0da31931117ea6e/variables" for ::1 at 2021-08-31 23:35:29 +0200
+Started GET "/" for ::1 at 2021-09-01 00:11:00 +0200
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        bin/rails db:migrate RAILS_ENV=development:
+
+Started POST "/__better_errors/836533e93b514097/variables" for ::1 at 2021-09-01 00:11:04 +0200
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (149.1ms)[0m  [1m[35mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "prereq_id" integer, "instructor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "enrollments"[0m
+  [1m[35m (98.1ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_id" integer, "student_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (105.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (137.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (129.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170710184251)[0m
+  [1m[35m (152.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170710184213),
+(20170710184239);
+
+[0m
+  [1m[35m (137.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-31 22:11:54.481240"], ["updated_at", "2021-08-31 22:11:54.481240"]]
+  [1m[35m (224.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (172.1ms)[0m  [1m[35mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "prereq_id" integer, "instructor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "enrollments"[0m
+  [1m[35m (80.1ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_id" integer, "student_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (122.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (99.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (120.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170710184251)[0m
+  [1m[35m (124.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170710184213),
+(20170710184239);
+
+[0m
+  [1m[35m (140.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-31 22:11:55.742084"], ["updated_at", "2021-08-31 22:11:55.742084"]]
+  [1m[35m (175.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-08-31 22:11:55.959227"], ["key", "environment"]]
+  [1m[35m (128.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CJ"], ["created_at", "2021-08-31 22:11:56.215402"], ["updated_at", "2021-08-31 22:11:56.215402"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Flarnie"], ["created_at", "2021-08-31 22:11:56.222406"], ["updated_at", "2021-08-31 22:11:56.222406"]]
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jeff"], ["created_at", "2021-08-31 22:11:56.225408"], ["updated_at", "2021-08-31 22:11:56.225408"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Georges St. Pierre"], ["created_at", "2021-08-31 22:11:56.233412"], ["updated_at", "2021-08-31 22:11:56.233412"]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ned"], ["created_at", "2021-08-31 22:11:56.237416"], ["updated_at", "2021-08-31 22:11:56.237416"]]
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "courses" ("name", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby 101"], ["instructor_id", 5], ["created_at", "2021-08-31 22:11:56.288449"], ["updated_at", "2021-08-31 22:11:56.288449"]]
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "courses" ("name", "prereq_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ruby 102"], ["prereq_id", 1], ["instructor_id", 5], ["created_at", "2021-08-31 22:11:56.293453"], ["updated_at", "2021-08-31 22:11:56.293453"]]
+  [1m[36mEnrollment Load (1.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments"[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 1], ["student_id", 3], ["created_at", "2021-08-31 22:11:56.339481"], ["updated_at", "2021-08-31 22:11:56.339481"]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 1], ["student_id", 4], ["created_at", "2021-08-31 22:11:56.344486"], ["updated_at", "2021-08-31 22:11:56.344486"]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 2], ["student_id", 1], ["created_at", "2021-08-31 22:11:56.351492"], ["updated_at", "2021-08-31 22:11:56.351492"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 2], ["student_id", 2], ["created_at", "2021-08-31 22:11:56.354495"], ["updated_at", "2021-08-31 22:11:56.354495"]]
+  [1m[35m (117.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2021-09-01 00:13:32 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller2/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller2/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (14.0ms)
+Completed 200 OK in 299ms (Views: 169.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CJ"], ["created_at", "2021-09-01 14:13:41.196123"], ["updated_at", "2021-09-01 14:13:41.196123"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Flarnie"], ["created_at", "2021-09-01 14:13:41.199125"], ["updated_at", "2021-09-01 14:13:41.199125"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jeff"], ["created_at", "2021-09-01 14:13:41.201125"], ["updated_at", "2021-09-01 14:13:41.201125"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Georges St. Pierre"], ["created_at", "2021-09-01 14:13:41.202126"], ["updated_at", "2021-09-01 14:13:41.202126"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ned"], ["created_at", "2021-09-01 14:13:41.204127"], ["updated_at", "2021-09-01 14:13:41.204127"]]
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "courses" ("name", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby 101"], ["instructor_id", 10], ["created_at", "2021-09-01 14:13:41.229145"], ["updated_at", "2021-09-01 14:13:41.229145"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "courses" ("name", "prereq_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ruby 102"], ["prereq_id", 3], ["instructor_id", 10], ["created_at", "2021-09-01 14:13:41.231147"], ["updated_at", "2021-09-01 14:13:41.231147"]]
+  [1m[36mEnrollment Load (1.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments"[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "enrollments" WHERE "enrollments"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "enrollments" WHERE "enrollments"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "enrollments" WHERE "enrollments"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "enrollments" WHERE "enrollments"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 3], ["student_id", 8], ["created_at", "2021-09-01 14:13:41.255162"], ["updated_at", "2021-09-01 14:13:41.255162"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 3], ["student_id", 9], ["created_at", "2021-09-01 14:13:41.257165"], ["updated_at", "2021-09-01 14:13:41.257165"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 4], ["student_id", 6], ["created_at", "2021-09-01 14:13:41.259166"], ["updated_at", "2021-09-01 14:13:41.259166"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("course_id", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["course_id", 4], ["student_id", 7], ["created_at", "2021-09-01 14:13:41.260166"], ["updated_at", "2021-09-01 14:13:41.260166"]]
+  [1m[35m (208.1ms)[0m  [1m[36mcommit transaction[0m
