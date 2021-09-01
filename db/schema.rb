@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20170710184251) do
     t.integer "instructor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+    
   end
 
   create_table "enrollments", force: :cascade do |t|
@@ -25,12 +27,16 @@ ActiveRecord::Schema.define(version: 20170710184251) do
     t.integer "student_id"  #foreign key to users table
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+    #each enrollment has one course and one student
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+    #students have many courses and many enrollments
   end
 
 end
